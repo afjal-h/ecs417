@@ -1,0 +1,129 @@
+  <!DOCTYPE html>
+  <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Week 4 - exercise 4</title>
+        <link rel="stylesheet" type="text/css" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="exercise4.css" />
+          <!-- head definitions go here -->
+      </head>
+      <body>
+          <form method ="POST" action ="http://webprojects.eecs.qmul.ac.uk/un300/week4/week4_process.php">
+            <fieldset id="container">
+              <legend>Shirt Order Form </legend>
+              <div id= "container1">
+                <div>
+                <label for="shirtSize">Shirt Size</label>
+                <select name="shirtSize" id="shirtSize">
+                  <option label="XXXS" value="S"></option>
+                  <option label="XXS" value="S"></option>
+                  <option label="XS" value="S"></option>
+                  <option label="S" value="S"></option>
+                  <option label="M" value="S"></option>
+                  <option label="L" value="S"></option>
+                  <option label="XL" value="S"></option>
+                  <option label="XXL" value="S"></option>
+                  <option label="XXXL" value="S"></option>
+                </select>
+              </div>
+              <div>
+                Sleeves
+                <div>
+                <label for="Short">Short</label>
+                <input type ="radio" name="sleeves" id="Short" value="Short">
+                </div>
+                <div>
+                <label for="Long">Long</label>
+                <input type ="radio" name="sleeves" id="Long" value="Long">
+                </div>
+              </div>
+              <div>
+                Choose Shirt Colour
+                <div>
+                <label for="colorpicker"></label>
+                <input type="color" id="colorpicker" value="#000000">
+                </div>
+              </div>
+              <div>
+                Quantity
+                  <label for="Quantity"></label>
+                  <input type="number" name="Quantity" id="Quantity" min="1"
+                </div>
+                <div>
+                  Date Requested
+                  <div>
+                    <label for="date"></label>
+                    <input type="date" id="date" name="date">
+                  </div>
+                </div>
+              </div>
+                <br>
+              <div id = "container2">
+                <div>
+                  Name
+                  <div>
+                  <label for="name"></label>
+                  <input type="text" name="name" id="name" required>
+                  </div>
+                </div>
+                <div>
+                  Email Address
+                  <div>
+                  <label for="email"></label>
+                  <input type="email" name="email" id="email" required>
+                  </div>
+                </div>
+                <div>
+                  Telephone Number
+                  <div>
+                  <label for="number"></label>
+                  <input type="tel" name="number" id="number" required pattern="[4-4]{2}-[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                    <small>Format: 44-207-882-1234</small>
+                  </div>
+                </div>
+              </div>
+                <br>
+                <div id="container3">
+                <div>
+                  Address
+                  <div>
+                  <label for="address"></label>
+                  <input type="text" name="address" id="address" required>
+                  </div>
+                </div>
+                <div>
+                  City
+                  <div class="custom-select" style="width:200px;">
+    <select>
+      <option value="0">Select city:</option>
+      <option value="1">Birmingham</option>
+      <option value="2">Glasgow</option>
+      <option value="3">London</option>
+      <option value="4">Manchester</option>
+    </select>
+  </div>
+                </div>
+                <div>
+                  Postcode
+                  <div>
+                  <label for="postcode"></label>
+                  <input type="text" name="postcode" id="postcode" required>
+                  </div>
+                </div>
+              </div>
+                <br>
+                <div id="submit">
+                  <div>
+                  <label for="">Please keep me informed about future shirt designs</label>
+                  <input type="checkbox" name="address" id="address" required>
+                  </div>
+                  <br>
+                <input class="button" type="submit" value="Submit">
+                    <form method="POST" action="process.php">
+                <input class="button" type="reset" value="Clear Form">
+                </div>
+
+
+            </fieldset>
+      </body>
+  </html>
