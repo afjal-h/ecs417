@@ -1,0 +1,101 @@
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  font: normal 16px Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+nav ul li{
+  display:inline;
+  float:left;
+  padding-left: 1%;
+
+}
+
+.links{
+    padding-top: 5px;
+}
+
+.name{
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+nav ul{
+  overflow: hidden;
+  background-color: #90EE90;
+  list-style-type: none;
+  padding: 1%;
+
+}
+
+#left{
+  position: absolute;
+  width: 25em;
+  left: 0em;
+  top:5em;
+
+}
+#skillz{
+  background-color: lightgrey;
+
+}
+#Skills{
+  background-color:#90EE90;
+  margin: 0px 20px;
+  padding: 15px;
+
+}
+
+#skillz p{
+  background-color: white;
+  padding: 10px;
+  margin: 0px 20px;
+
+
+}
+
+#right{
+  position: absolute;
+  width: 25em;
+  right: 0em;
+  top:5em;
+}
+nav ul li a{
+  text-decoration:none;
+
+}
+figure{
+  float:right;
+}
+img{
+  float:left;
+}
+
+#main{
+  margin-left: 26em;
+  margin-right:26em;
+}
+#sidelink{
+  background-color: lightgrey;
+  padding: 5px;
+}
+
+#sidelink a, #sidelink li{
+  list-style-type: none;
+  text-decoration:none;
+  padding-bottom: 7px;
+}
+
+#sidelink li{
+    margin-left: 15px;
+
+}
+#researchTab{
+  background-color:#FFFDD0;
+  padding:10px 0px;
+}
+#researchTab h3, #researchTab p{
+    padding-left: 25px;
+}
