@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+              <link rel="stylesheet" type="text/css" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+      <title>Login- Mohammed Afjal Hussain</title>
+    </head>
+    <body>
+        <div class="box">
+      <div class="LoginContainer">
+          <h1>Login</h1>
+        <br><br>
+        <div class="loginbox">
+          <form id="field" action="login.php" method="POST">
+          <div class="inputs">
+          <div class="inputbox">
+          <input type="email" placeholder="Email" name="email" required>
+          </div>
+          <div class="inputbox">
+          <input type="password" placeholder="Password" name="password" required>
+          </div>
+          <input class="buttn"type="submit" name="Login" value="Sign in">
+          <input class="buttn"type="button" onclick="myFunction()"value="Clear">
+          </div>
+        </form>
+        <script>
+        function myFunction(){
+          var input = confirm("Are you sure you want to clear all fields?");
+          if (input == true) {
+            document.getElementById("field").reset();
+          }
+        }
+        </script>
+
+      </div>
+      </div>
+    <footer>
+      <div class ="footercontent">
+      <ul>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <div class="footer-bottom">
+      <p> © Copyright Mohammed Afjal Hussain 2020</p>
+    </div>
+  </div>
+    </footer>
+    </body>
+</html>
