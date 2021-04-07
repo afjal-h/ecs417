@@ -47,20 +47,11 @@ session_start();
           <div class="text-center">
             <div class="form-group">
     <h2> Comments</h2>
-    <?php
-    if (!isset($_SESSION['User'])){
-      echo "<a href='login.html' class='btn btn-light' >Login to add comments </a>";
-
-    }
-    else{
-      echo '  <form id="field"action="addComment.php" method="POST">
-        <textarea class="form-control" name="content" rows="3"></textarea>
-         <input type="hidden" id="Id" name="postId" value='.$_REQUEST["id"].';>
-        <button type="submit" class="btn btn-dark">Submit</button>
-      </form>';
-    }
-
-     ?>
+    <form id="field"action="addComment.php" method="POST">
+    <textarea class="form-control" name="content" rows="3"></textarea>
+     <input type="hidden" id="Id" name="postId" value=<?php echo $_REQUEST['id']; ?>>
+    <button type="submit" class="btn btn-dark">Submit</button>
+  </form>
   </div>
 
       </div>
