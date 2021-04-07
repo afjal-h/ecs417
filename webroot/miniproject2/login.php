@@ -13,6 +13,9 @@ if(isset($_POST['Login'])){
     if(mysqli_fetch_assoc($result)){
       $namefetch=mysqli_query($connect,"select Firstname from users where email= '".$_POST['email']."' ");
       $name = mysqli_fetch_array($namefetch);
+      $adminfetch=mysqli_query($connect,"select admin from users where email= '".$_POST['email']."' ");
+      $admin = mysqli_fetch_array($adminfetch);
+      $_SESSION['Admin']= $admin['admin'];
       $_SESSION['User']=  $name[0];
       header("location:writeBlog.php");
     }
