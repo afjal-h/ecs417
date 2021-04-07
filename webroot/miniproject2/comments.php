@@ -1,5 +1,5 @@
 <?php
-include "getBlog.php";
+include "getComments.php";
 session_start();
 
 
@@ -45,18 +45,33 @@ session_start();
 
         <div class="container mt-5">
           <div class="text-center">
-            <a href="writeBlog.php" class="btn btn-light">+ New Post</a>
+            <div class="form-group">
+    <h2> Comments</h2>
+    <?php
+    if (!isset($_SESSION['User'])){
+      echo "<a href='login.html' class='btn btn-light' >Login to add comments </a>";
+
+    }
+    else{
+      echo '  <form id="field"action="addComment.php" method="POST">
+        <textarea class="form-control" name="content" rows="3"></textarea>
+         <input type="hidden" id="Id" name="postId" value='.$_REQUEST["id"].';>
+        <button type="submit" class="btn btn-dark">Submit</button>
+      </form>';
+    }
+
+     ?>
+  </div>
 
       </div>
       <div class="row">
-            <?php foreach($all_data as $q){ ?>
+            <?php foreach($result as $q){ ?>
                 <div class="d-flex justify-content-center">
-                    <div class="card text-white bg-dark mt-5" style="width: 300rem;">
+                    <div class="card text-white bg-dark mt-5" style="width: 100rem;">
                         <div class="card-body">
-                            <h3 class="card-title"><?php echo $q['title'];?></h3>
+                            <h3 class="card-title"><?php echo $q['name'];?></h3>
                             <p class="card-text"><?php echo $q['content'];?></p>
-                            <p class="card-text"><?php echo substr($q['date'], 0, 50);?></p>
-                            <a href="comments.php? id=<?php echo $q['id'];?>" class="btn btn-light">Read Comments </a>
+                            <a href="deleteComment.php? id=<?php echo $q['id'];?>" name="delete" class="btn btn-light">Delete </a>
                         </div>
                     </div>
                 </div>
