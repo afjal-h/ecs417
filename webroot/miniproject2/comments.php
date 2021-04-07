@@ -73,7 +73,7 @@ session_start();
                             <p class="card-text"><?php echo $q['content'];?></p>
                             <?php
                             if (isset($_SESSION['Admin'])){
-                              echo "<a href='deleteComment.php? id=".$q['id']." name='delete' class='btn btn-light'>Delete </a>";
+                              echo '<a href="deleteComment.php? id='.$q["id"].' name="delete" class="btn btn-light">Delete </a>';
 
                             }
                             ?>
