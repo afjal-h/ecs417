@@ -488,7 +488,6 @@ figure .picture{
 }
 
 .newBlogbox{
-  float: left;
   border: 0px solid green ;
   background: #ffffff;
   border-radius: 25px;
