@@ -62,7 +62,6 @@ session_start();
 
      ?>
   </div>
-
       </div>
       <div class="row">
             <?php foreach($result as $q){ ?>
@@ -72,10 +71,14 @@ session_start();
                             <h3 class="card-title"><?php echo $q['name'];?></h3>
                             <p class="card-text"><?php echo $q['content'];?></p>
                             <?php
-                            if ($_SESSION['Admin']==TRUE){
-                              echo '<a href="deleteComment.php? id='.$q["id"].' name="delete" class="btn btn-light">Delete </a>';
+                            if(isset($_SESSION['Admin'])){
+                              if ($_SESSION['Admin']==TRUE){
+                                echo '<a href="deleteComment.php? id='.$q["id"].' name="delete" class="btn btn-light">Delete </a>';
+
+                              }
 
                             }
+
                             ?>
 
                         </div>

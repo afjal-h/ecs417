@@ -10,8 +10,12 @@ if (!isset($_SESSION['User'])){
 <!DOCTYPE html>
 <html>
     <head>
+       <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
               <link rel="stylesheet" type="text/css" href="reset.css" />
+
+
   <link rel="stylesheet" type="text/css" href="style.css" />
+
       <title>New Blog- Mohammed Afjal Hussain</title>
     </head>
     <body>
@@ -41,7 +45,6 @@ if (!isset($_SESSION['User'])){
         </div>
       </header>
       <div class="newBlogContainer">
-          <h1>New Blog</h1>
         <br><br>
         <div class="newBlogbox">
           <form id="field"action="addPost.php" method="POST">
@@ -54,6 +57,7 @@ if (!isset($_SESSION['User'])){
           </div>
           <button class="buttn" id="submit" name="submit" type="submit" onclick="checkempty()" value="Post">Post</button>
           <input class="buttn"type="button" onclick="myFunction()"value="Clear">
+          <input class="buttn"type="button" onclick="preview()"value="Preview">
           </div>
         </form>
         <script>
@@ -83,9 +87,23 @@ if (!isset($_SESSION['User'])){
               }
           });
         }
+        function preview(){
+          document.getElementById('title').innerHTML = document.getElementById('inputbox').value;
+          document.getElementById('content').innerHTML = document.getElementById('blog_input_text').value;
+        }
         </script>
 
       </div>
+      </div>
+      <div class="d-flex justify-content-center">
+          <div class="card text-white bg-dark mt-5" style="width: 50rem;">
+              <div class="card-body">
+                  <h2 class="card-title" id="title"></h2>
+                  <p class="card-text" id="content"></p>
+                  <p class="card-text" id="date"></p>
+                  <button class="btn btn-light">Read Comments </button>
+              </div>
+          </div>
       </div>
     <footer>
       <div class ="footercontent">

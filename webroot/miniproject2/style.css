@@ -472,7 +472,8 @@ figure .picture{
 
 }
 
-.newBlogContainer h1{
+.newBlogContainer h2{
+
   text-align: center;
   background-color:#ffffff;
   border-radius:35px;
@@ -487,6 +488,7 @@ figure .picture{
 }
 
 .newBlogbox{
+  float: left;
   border: 0px solid green ;
   background: #ffffff;
   border-radius: 25px;
