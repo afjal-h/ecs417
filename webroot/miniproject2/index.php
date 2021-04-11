@@ -69,7 +69,7 @@ session_start();
         <div class="socials">
           <ul>
             <li><a href="https://github.com/afjal-h"><img src="images/github-white.png" class="Icon" alt="github"></i> </li>
-              <li><a href="https://www.instagram.com/afjal._.h/"><img src="images/Instagram.png" class="Icon" alt="instagram"> </li>
+              <li><a href="https://www.instagram.com/afjal._.h/"><img src="images/instagram.png" class="Icon" alt="instagram"> </li>
       </div>
 
 
